@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery Page</title>
+
+  <!-- This links the html to the css external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <!-- Activates font-awesome from w3schools -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+  /*Aligning all text and images in the center of the
+  page ,this occupies the 3 row from column 1 to 5*/
+
+  #camping_gallery{
+    grid-row: 3;
+    grid-column: 1/5;
+    text-align: center;
+    border: 3px solid #333;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+  }
+
+  /*Aligning the images in the center and declaring the
+  grid rows and columns as well as a border*/
+
+  #fishing_gallery{
+    grid-row: 4;
+    grid-column: 1/5;
+    text-align: center;
+    border: 3px solid #333;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+  }
+
+  /*This will be aligned in the 5th row and starts at column 1-5
+  ,also the images are all aligned in th center */
+
+  #hiking_gallery{
+    grid-row: 5;
+    grid-column: 1/5;
+    text-align: center;
+    border: 3px solid #333;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+  }
+
+  /*Consist of a font size of 20px styles are the same as the ones
+  mentioned from the above only differs in the row it is located */
+
+  #climbing_gallery{
+    grid-row: 6;
+    grid-column: 1/5;
+    text-align: center;
+    border: 3px solid #333;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+  }
+
+  /*The sidebar will be aligned on the right side of the page
+  coveringa space from column 6-12 with a border of 3px*/
+
+  #gallery_sidebar{
+    grid-row: 3/4;
+    grid-column: 6/12;
+    background-color: black;
+    border: 3px solid #333;
+    height: 150px;
+  }
+
+  #gallery_sidebar a{
+    /*  removing the underline and adding a white text color to the sidebar*/
+    color: white;
+    text-decoration: none;
+  }
+
+  #gallery_sidebar ul{
+    /* removing the bullets from the sidebar */
+    list-style-type: none;
+  }
+
+  #gallery_sidebar li{
+    /* aligned the list items by adding padding bottom in the sidebar */
+    padding-bottom: 10px;
+  }
+
+  /* This is the code that allows the images in my gallery to have a zoom function */
+
+  a img{
+    cursor: zoom-in;
+  }
+
+  .thumbnail {
+    max-width: 40%;
+  }
+  .lightbox {
+    /** Default lightbox to hidden */
+    display: none;
+
+    /** Position and style */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+  }
+
+  .lightbox img {
+    /** Pad the lightbox image */
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+  }
+
+  .lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    /** Unhide lightbox **/
+    display: block;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- This is my main grid holder which will contain nested grids within-->
+  <div id="main_grid">
+
+    <!-- navbar contains an unordered list which consist of a home, gallery and contact anchor tag -->
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="CSS_Grid_Layout.html">HOME</a></li>
+        <li><a href="Gallery.html">GALLERY</a></li>
+        <li><a href="Contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- adding a h1 header to the center of my webpage -->
+
+    <header class="main_header">
+      <h1>Gallery Page</h1>
+    </header>
+
+    <!--  adding an unordered list to the sidebar ,and made
+    use of anchor tags for the external links-->
+
+    <aside id="gallery_sidebar">
+      <nav>
+        <ul>
+          <li><a href="https://www.capeunionmart.co.za/5-of-south-africa-s-best-multi-day-hikes?gclid=CjwKCAjwuvjNBRBPEiwApYq0ztx6hfgtYlwHJnLlrXYBbpvB4M9PKOn716zk7mRl1BSg81gjfz75HRoCnPcQAvD_BwE">Hike</a></li>
+          <li><a href="http://www.getaway.co.za/travel-ideas/places-to-stay/camping-western-cape-campsites/">Campsites</a></li>
+          <li><a href="https://www.montagu.org.za/what-to-do/rock-climbing/">Climbing</a></li>
+          <li><a href="https://showme.co.za/cape-town/tourism/best-recreational-fishing-spots-in-and-around-cape-town/">Fishing</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!--Within the div i inserted 4 img src for the images to display horizontal and a h3 header-->
+
+    <div id="camping_gallery">
+      <h3>Camping Sites</h3>
+
+      <!--Inserting the required classes and ids for the process of allowing the zoom
+      click on function to work ,this I would do for each outdoor excursion -->
+
+      <a href="#img1"><img class="thumbnail" src="images\camping sites.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\camping sites.jpg" id="img1"></a>
+
+      <a href="#img2"><img src="images\Mahai-Campsite-Drakensberg.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\Mahai-Campsite-Drakensberg.jpg" id="img2"></a>
+
+      <a href="#img3"><img src="images\Warmbaths-Camping.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\Warmbaths-Camping.jpg" id="img3"></a>
+
+      <a href="#img4"><img src="images\tented-camp.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\tented-camp.jpg" id="img4"></a>
+    </div>
+    <!-- The end of the camping section -->
+
+    <!-- The beginning of the inserting the climbing images within a div of its own ,
+    it consist of img src and anchor tags as well as a suitable width and height-->
+
+    <div id="fishing_gallery">
+      <h3>Fishing Sites</h3>
+      <a href="#img5"><img src="images\Bergtun_houses_fishing_Norway_More_Romsdal_032710f4-bdcf-463d-8a38-759970a7263e.webp" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\Bergtun_houses_fishing_Norway_More_Romsdal_032710f4-bdcf-463d-8a38-759970a7263e.webp" id="img5"></a>
+
+      <a href="#img6"><img src="images\fishing_external.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\fishing_external.jpg" id="img6"></a>
+
+      <a href="#img7"><img src="images\fishing_harbour.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\fishing_harbour.jpg" id="img7"></a>
+
+      <a href="#img8"><img src="images\header-bass-fishing.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\header-bass-fishing.jpg" id="img8"></a>
+    </div>
+    <!-- The end of the fishing section -->
+
+    <!-- The beginning of the inserting the hiking images within a div of its own ,
+    it consist of img src and anchor tags as well as a suitable width and height-->
+
+    <div id="hiking_gallery">
+      <h3>Hiking Sites</h3>
+      <a href="#img9"><img src="images\hike.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\hike.jpg" id="img9"></a>
+
+      <a href="#img10"><img src="images\hiking.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\hiking.jpg" id="img10"></a>
+
+      <a href="#img11"><img src="images\kogelberg-trail-best-hikes.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\kogelberg-trail-best-hikes.jpg"  id="img11"></a>
+
+      <a href="#img12"><img src="images\combo_hike.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\combo_hike.jpg" id="img12" ></a>
+    </div>
+    <!-- The end of the hiking section -->
+
+    <!-- The beginning of the inserting the climbing images within a div of its own ,
+    it consist of img src and anchor tags as well as a suitable width and height-->
+
+    <div id="climbing_gallery">
+      <h3>Climbing Sites</h3>
+      <a href="#img13"><img src="images\WC Witels 1 upper reaches..jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\WC Witels 1 upper reaches..jpg" id="img13"></a>
+
+      <a href="#img14"><img src="images\maxresdefault.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img  class="lightbox" src="images\maxresdefault.jpg" id="img14"></a>
+
+      <a href="#img15"><img src="images\montagu_climbing_steeple.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\montagu_climbing_steeple.jpg" id="img15"></a>
+
+      <a href="#img16"><img src="images\rocklands_highline_event_2015.jpg" alt="" width="250px" height="160px"></a>
+      <a href="#_"><img class="lightbox" src="images\rocklands_highline_event_2015.jpg" id="img16"></a>
+    </div>
+    <!-- The end of the climbing section -->
+
+    <!-- adding social media links to the footer of the page
+    the images are linked from w3schools font awesome  -->
+
+    <footer id="footer">
+      <a href=""><i class="fa fa-facebook-square" style="font-size:48px;color:black"></i></a>
+      <a href=""><i class="fa fa-twitter-square" style="font-size:48px;color:black"></i></a>
+      <a href=""><i class="fa fa-instagram" style="font-size:48px;color:black"></i></a>
+    </footer>
+    <!--  the end of the footer stylying-->
+
+  </div>
+  <!--The end of the main grid -->
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Page</title>
+
+  <!-- This links the html to the css external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <!-- Activates font-awesome from w3schools -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+  /* Declaring the rows and column of the contact form as well as inserting a background
+  gray color this section will occupy the third row from column 1 to 12*/
+
+  #contact_left_form{
+    grid-row: 3;
+    grid-column: 1/6;
+    width: 100%;
+  }
+
+  /* Aligning the text away from the border by adding margin left and
+  for better visibility i added a bigger font size of 20px */
+
+  #contact_left_form p{
+    margin-left: 4%;
+    font-size: 20px;
+  }
+
+  #contact_left_form input{
+    margin-left: 30%;
+    width: 60%;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  /* for better position i added a border of 60% with aborder radious of 10px  */
+
+  #contact_left_form textarea{
+    margin-left: 30%;
+    width: 60%;
+    border-radius: 10px;
+  }
+
+  /*  styling th button*/
+
+  #contact_left_form button{
+    margin-left: 80%;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color:white;
+  }
+
+  /*This will be placed in the 3rd row and will start at column 6 and
+  end at 12,consist of a 100% max-width,a font size of 20px */
+
+  #contact_right_form{
+    grid-row: 3;
+    grid-column: 6/12;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- This is my main grid holder which will contain nested grids within-->
+  <div id="main_grid">
+
+    <!-- navbar contains an unordered list which consist of a home, gallery and contact anchor tag -->
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="CSS_Grid_Layout.html">HOME</a></li>
+        <li><a href="Gallery.html">GALLERY</a></li>
+        <li><a href="Contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!--Adding a h1 header to the center of my webpage -->
+
+    <header class="main_header">
+      <h1>Contact Form</h1>
+    </header>
+
+    <!--This section is the holder of all the contact information,
+    it consist of input fieldsand p  tags for the wordin -->
+
+    <section id="contact_left_form">
+
+      <!-- making use of a p tag to add a caption on the beginning of the form  -->
+      <p>Please dont hesitate to contact me if you have any questions,comments or messages,I will try to respond to everything </p>
+
+      <!-- Within a p tag i made use of input fields for the user to enter their
+      personal details,I make use of the same concept throughout the section -->
+
+      <p>
+        First Name:<br>
+        <input  type="text" >
+      </p>
+
+      <p>
+        Surname:<br>
+        <input  type="text" >
+      </p>
+
+      <p>
+        Email:<br>
+        <input  type="email"  >
+      </p>
+
+      <p>
+        Comment/Text Box<br>
+        <textarea name="name" rows="15" cols="30" placeholder="Type here..."></textarea>
+      </p>
+
+      <p>
+        <button>Submit</button>
+      </p>
+
+      <p>Thanks for completing the above form...</p>
+    </section>
+
+    <!--Aligned on the right of the browser,I made use of a p tag to
+    list the email and phone number and a h3 for the header-->
+
+    <section id="contact_right_form">
+      <h3>Contact details</h3>
+      <p>Email:lance.lifechoices@gmail.com</p>
+      <p>Phone:061 765 0636</p>
+
+      <p>Address:25 Dissel Road</p>
+      <p></p>
+
+    </section>
+
+    <!--Adding social media links to the footer of the page the
+    images are linked from w3schools font awesome  -->
+
+    <footer id="footer">
+      <a href=""><i class="fa fa-facebook-square" style="font-size:48px;color:black"></i></a>
+      <a href=""><i class="fa fa-twitter-square" style="font-size:48px;color:black"></i></a>
+      <a href=""><i class="fa fa-instagram" style="font-size:48px;color:black"></i></a>
+    </footer>
+  </div>
+
+</body>
+</html>

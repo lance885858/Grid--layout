@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+
+  <!-- This links the html to the css external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <!-- Activates font-awesome from w3schools -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+  /* centered black headings */
+  h2{
+    text-align: center;
+    color: black;
+  }
+
+  /* This is my main h1 of my home page aligned in the center of the browser,
+  with a white text color and a background image*/
+  #home_main_header{
+    grid-row: 2;
+    grid-column: 1/12;
+    text-align: center;
+    background-image: url("images/navbar image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+
+  /*Declaring the rows and columns for the main images .
+  aligned horizontal with a 5px border and a width of 100%. */
+
+  #home_top_images{
+    grid-row: 3;
+    grid-column: 1/12;
+    background-color: white;
+    border: 5px solid #333;
+    width: 100%;
+  }
+
+  /*Reducing the opacity to the hover function as well as making it a border-radius of 50%  */
+  #home_top_images img:hover{
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  /*Declaring the position the camping,hiking,fishing and
+  climbing images would occupy on the browser*/
+
+  /*  Camping*/
+  #Camping_section_images{
+    grid-row: 3;
+    grid-column: 1/3;
+    width: 25%;
+    text-align: center;
+    float: left;
+  }
+
+  /* Climbing */
+  #Climbing_section_images{
+    grid-row: 3;
+    grid-column: 3/6;
+    width: 25%;
+    text-align: center;
+    float: left;
+  }
+
+  /*  Fishing*/
+  #Fishing_section_images{
+    grid-row: 3;
+    grid-column: 6/9;
+    width: 25%;
+    text-align: center;
+    float: left;
+  }
+
+  /* Hiking */
+  #Hiking_section_images{
+    grid-row: 3;
+    grid-column: 9/12;
+    width: 25%;
+    text-align: center;
+    float: left;
+  }
+
+  /* Positioning the camping section and inserting a suitable width and height */
+  #Camping{
+    grid-row: 4;
+    grid-column: 1/6;
+    color: white;
+    width: 90%;
+    height: 1450px;
+    background-color: #333;
+  }
+
+  /* Adding a box shadow effect to the image */
+  #Camping img{
+    margin-left: 10px;
+    box-shadow: 3px 3px 3px black;
+  }
+
+  #Camping p{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #Camping h3,h4{
+    text-align: center;
+    color: black;
+  }
+
+  #Camping ul{
+    list-style-type: none;
+  }
+
+  #Camping li{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Positioning the area the climbing section would occupy by inserting rows and
+  columns ,also adding a suitable width with a background-color and aligned text*/
+
+  #climbing{
+    grid-row: 5;
+    grid-column: 1/6;
+    text-align: center;
+    background-color: #333;
+    width: 90%;
+  }
+
+  /* Condencing the paragraphs by adding padding and giving it a suitable  font size*/
+  #climbing p{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size:20px;
+  }
+
+ /*  inserting a box shadow around the perimeter of the image*/
+
+  #climbing img{
+    box-shadow: 3px 3px 3px black;
+  }
+
+  /* declaring the rows and columns to allocate the positioning of
+  the section,has a suitable width and a background-color */
+
+  #fishing{
+    grid-row: 6;
+    grid-column: 1/6;
+    text-align: center;
+    background-color: #333;
+    width: 90%;
+  }
+
+  /*  */
+  #fishing p{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+  }
+
+  /* positioning the hiking section ,using rows and columns
+  with abackground-color of gray and a max-width of 90% */
+
+  #hiking{
+    grid-row: 7;
+    grid-column: 1/6;
+    text-align: center;
+    background-color: #333;
+    width: 90%;
+  }
+
+  /*  aligning the p tags by adding padding*/
+  #hiking p{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+  }
+
+  #hiking img{
+    box-shadow:3px 3px 3px black;
+  }
+
+  /* Sidebar stylying,declaring the position using grids and columns ,
+     adding a border with a suitable height and width */
+
+  #home_sidebar{
+    grid-row: 4/5;
+    grid-column: 6/12;
+    background-color: black;
+    border: 3px solid #333;
+    height: 100px;
+    width: 10%;
+    position: fixed;
+    margin-left: 80%;
+    margin-top: 35%;
+  }
+
+  /* adding white text color to the anchor text and removing the underline */
+
+  #home_sidebar a{
+    color: white;
+    text-decoration: none;
+    padding-right: 10px;
+  }
+
+  /* removing the bullets from the sidebar */
+  #home_sidebar ul{
+    list-style-type: none;
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- This is my main grid holder which will contain nested grids within-->
+  <div id="main_grid">
+
+    <!-- navbar contains an unordered list which consist of a home, gallery and contact anchor tag -->
+    <nav id="navbar">
+      <ul>
+        <li><a href="CSS_Grid_Layout.html">HOME</a></li>
+        <li><a href="Gallery.html">GALLERY</a></li>
+        <li><a href="Contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- Adding a h1 within a header tag  -->
+    <header id="home_main_header">
+      <h1>Outdoors Adventures</h1>
+    </header>
+
+    <!-- Adding the  linked images to the top of the page,using anchor tags as well as img src -->
+    <div id="home_top_images">
+
+      <!-- Adding a id to each img src for individual stylying -->
+      <section id="Camping_section_images">
+        <h2>Camping</h2>
+        <a href="#Camping"><img src="images\main_camping.jpg" alt="Camping" width="300px" height="200px"></a>
+      </section>
+
+      <section id="Climbing_section_images">
+        <h2>Climbing</h2>
+        <a href="#climbing"><img src="images\main_climbing.jpg" alt="Climbing" width="300px" height="200px"></a>
+      </section>
+
+      <section id="Fishing_section_images">
+        <h2>Fishing</h2>
+        <a href="#fishing"><img src="images\main_fishing.jpg" alt="Fishing" width="300px" height="200px"></a>
+      </section>
+
+      <section id="Hiking_section_images">
+        <h2>Hiking</h2>
+        <a href="#hiking"><img src="images\main_hike.jpg" alt="Hiking" width="300px" height="200px"></a>
+      </section>
+    </div>
+
+    <!--  sidebar-->
+    <aside id="home_sidebar">
+      <nav>
+        <ul>
+          <li><a href="https://www.capeunionmart.co.za/5-of-south-africa-s-best-multi-day-hikes?gclid=CjwKCAjwuvjNBRBPEiwApYq0ztx6hfgtYlwHJnLlrXYBbpvB4M9PKOn716zk7mRl1BSg81gjfz75HRoCnPcQAvD_BwE">Hike</a></li>
+          <li><a href="http://www.getaway.co.za/travel-ideas/places-to-stay/camping-western-cape-campsites/">Campsites</a></li>
+          <li><a href="https://www.montagu.org.za/what-to-do/rock-climbing/">Climbing</a></li>
+          <li><a href="https://showme.co.za/cape-town/tourism/best-recreational-fishing-spots-in-and-around-cape-town/">Fishing</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Campsite -->
+    <div id="Camping">
+
+      <div>
+        <h2>The Amazing Tweede Tol Campsite</h2>
+
+        <img src="images\Campsite.jpg" alt="" width="1000px" height="400px">
+        <p>There are 20 standard campsites, each with its own braai area. Hot and cold water ablutions are available as well as a jungle gym for children. There are also six fenced off private campsites, each with its own kitchenette, shower and toilet, for those who value their privacy. Firewood is available for sale. A maximum of six people and two cars are allowed per campsite. Extra parking is available at the picnic parking area.</p>
+        <p> Campsite arrival time is between 2pm and 6pm (8pm on Fridays) and departure time is 10am. Late arrivals will need to notify the manager on 082 494 9707. Bathroom lights stay on until 10pm. Overnight camping rates exclude conservation fees and campers have exclusive use of the Wolwekloof River swimming holes. On departure at 10am, campers may pay the conservation day fee and move to the picnic area.</p>
+        <p>Limietberg is a pristine nature reserve tucked away in the Du Toitskloof Mountains, near Paarl. The reserve stretches from Franschhoek in the south, eastwards towards Groot Drakenstein, and northwards as far as Voëlvlei Dam and is a World Heritage Site.</p>
+        <p>Limietberg offers a number of beautiful hikes through steep kloofs and deep valleys. Du Toits Peak, at 1 996m, is the highest point within the reserve. Visitors can also visit the many historical sites along the trails, including ancient rock art, a disused manganese mine and the graves of convicts who helped build the Bainskloof Pass.</p>
+        <p>The reserve gets extremely hot and dry in summer, but in winter the high mountain peaks are capped with snow. When visiting Limietberg, please check the weather forecast, as hikers can get caught in unpredictable conditions and the mountainous terrain makes rescue operations difficult.
+        <p>Tweede Tol is a perfect spot for picnicking, but to avoid disappointment we suggest you come early, as day visitors are limited to 120 people per day.</p>
+
+          <h3>ABOUT TWEEDE TOL - LIMIETBERG</h3>
+          <p>TWEEDE TOL is part of the Limietberg Nature Reserve - a vast 102 000ha of mountains, wildlife and fynbos. The site is located at the original tollgate of the beautiful Bainskloof Pass, built in 1853.</p>
+
+          <h4>FEATURES AND FACILITIES</h4>
+          <ul>
+            <li>Sites available 20</li>
+            <li>Hiking</li>
+            <li>Hot water</li>
+            <li>Fishing</li>
+            <li>Nearby water River</li>
+            <li>Cell Phone Reception</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- climbing -->
+      <div id="climbing">
+        <div class="">
+          <h2>Climbing</h2>
+          <img src="images\climbing_one.jpg" alt="" width="400px" height="250px">
+          <img src="images\climbing_two.png" alt="" width="400px" height="250px">
+
+          <p>You don’t have to be the world’s best climber to enjoy scaling Montagu’s rock faces. You don’t need to have climbed at all. There are as many beginner-level options as there are scarily insane ones, and there are two very experienced local climbers, Justin and Riki Lawson, who can show you the ropes.</p>
+
+          <p>Rocklands is found in the Cederberg mountains 250km/3 hours north of Cape Town. It is a very beautiful area in a semi-desert setting, very isolated and very safe. Rocklands is undoubtedly famous for it's world class bouldering but this should not deter you from sampling the fine sport climbing. There is a large variety of quality climbing of all grades in both bouldering and sport climbing. All the sport routes are single pitch and you will have to do a small amount of walking to get to the different areas. Most of the original climbing is situated on CapeNature land and thus day or week permits must be obtained. Permits for bouldering are not covered by Wild Cards. Many of the newer areas being developed are on private farms some which have small (30-40 rand) day fees. The rock is a fine grain sandstone of medium hardness, excellent for climbing on due to its varied features. It is quite rough so you will surely need to plan rest days to re-grow some skin.</p>
+        </div>
+
+      </div>
+
+      <!-- fishing -->
+      <div id="fishing">
+        <h2>Fishing</h2>
+        <img src="images\fishing_one.JPG" alt="" width="400px" height="250px">
+        <img src="images\fishing_two.jpg" alt="" width="400px" height="250px">
+        <p>Many fishermen’s journeys are more than likely to end up in Cape Town.  There are excellent fishing spots in a number of places depending on whether you are looking for Big Game Fishing or something more along the lines of a quiet fly-fishing trip. Cape Town also offers both saltwater and freshwater fishing options, raging sea fishing or quiet rivers, streams and trout fishing in dams.</p>
+      </div>
+
+      <!--hiking within the div -->
+      <div id="hiking">
+        <h2>Hiking</h2>
+
+        <img src="images\kogelberg-trail-best-hikes.jpg" alt="" width="400px" height="250px">
+        <img src="images\traverse-cracks.jpg" alt="" width="400px" height="250px">
+        <p>This route goes up the fabulous India—Venster Route, follows a spectacular traverse on the face of Table Mountain, and then descends steeply down Yellowstone Gully: not for the faint-hearted! If you were even slightly out of your comfort zone on the India—Venster scrambles, don’t proceed!</p>
+
+        <p>The Alphen Trail is possibly one of the most popular of the green belt walks of the Constantia Valley. The walk can start at either end, but most people park their cars on the bend of Alphen Drive that leads off Constantia Main Road to the Alphen Hotel (a national monument in its own right with beautiful gardens and tea to die for, if you’re looking for somewhere to do ‘high tea’ before or after your walk). The trail winds along the Diep River to the Constantiaberg Mountain and in places allows one to walk on either side of the river, with a number of bridge crossings. It’s a beautiful walk filled with lush grass, trees, beautiful skies and the Le Sueur Meadow on the far end of the walk towards Hohenort. People take their dogs and families on Sunday afternoon rambles here. The walk never fails to restore the soul, demanding little from one and yet giving so much in return by way of views and fresh air.</p>
+      </div>
+
+      <!-- adding social media links to the footer of the page
+           the images are linked from w3schools font awesome  -->
+
+      <footer id="footer">
+        <a href=""><i class="fa fa-facebook-square" style="font-size:48px;color:black"></i></a>
+        <a href=""><i class="fa fa-twitter-square" style="font-size:48px;color:black"></i></a>
+        <a href=""><i class="fa fa-instagram" style="font-size:48px;color:black"></i></a>
+      </footer>
+
+    </div>
+    <!--The end of the main grid -->
+
+  </body>
+  </html>

@@ -1,0 +1,70 @@
+/* This is my external stylesheet */
+
+/* Condencing the left and right sides of the browser page by adding
+margin left and right,and adding a gray background color to the body */
+
+body{
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: gray;
+  color: white;
+}
+
+/* This is the stylying of my main div declaring the grid to display and adding a grid gap*/
+
+#main_grid{
+  display: grid;
+  grid-gap: 1vw;
+}
+
+/* navbar declaring the position by adding a row and column and a background gray color*/
+
+#navbar{
+  grid-row: 1;
+  grid-column: 1/12;
+  background-color: #333;
+}
+
+/* Removing the bullets from the unordered list*/
+
+#navbar ul{
+  list-style-type: none;
+}
+
+/* Aligning the image horizontal */
+
+#navbar li{
+  float: left;
+}
+
+/*Removing the underline and changing the color of the anchor
+tag text to black also adding margin to the anchor text*/
+
+#navbar li a{
+  margin-left: 240px;
+  text-decoration: none;
+  color: white;
+}
+
+/*Contact and gallery  header stylying.declaring the grid rows and columns,centered
+white text color as well as a gray background color this section will occupy the
+second row from column 1 to 12*/
+
+.main_header{
+  grid-row: 2;
+  grid-column: 1/12;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+
+/*Declaring the position the footer will display on the browser by
+inserting the grid row and columns and aligning the text centered */
+
+#footer{
+  grid-row: 8;
+  grid-column: 1/12;
+  background-color: #333;
+  text-align: center;
+}
